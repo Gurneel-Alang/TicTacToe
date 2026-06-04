@@ -3,9 +3,11 @@ import java.awt.*;
 
 public class TicTacToeController {
 
+    // Instance variables
     private TicTacToeModel model;
     private TicTacToeView view;
 
+    // Constructor
     public TicTacToeController(TicTacToeModel model, TicTacToeView view) {
         this.model = model;
         this.view = view;
@@ -20,6 +22,7 @@ public class TicTacToeController {
         }
     }
 
+    // Button action handler
     private void handleButtonClick(int row, int col) {
         if (model.makeMove(row, col)) {
             char player = model.getCurrentPlayer();

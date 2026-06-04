@@ -51,7 +51,7 @@ public class TicTacToeView {
 
     public JButton[][] getButtons() { return buttons; }
 
-    //
+    // Element manipulation
     public void setTopLabel(String text) { topLabel.setText(text); }
 
     public void hideTopLabel() { topLabel.setVisible(false); }
