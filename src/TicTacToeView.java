@@ -12,7 +12,11 @@ public class TicTacToeView {
     // Constructor (actual GUI)
     public TicTacToeView() {
         topLabel = new JLabel("Current player: X");
+        topLabel.setFont(new Font("Arial", Font.PLAIN, 24));
+        topLabel.setForeground(Color.BLUE);
+
         bottomLabel = new JLabel("");
+        bottomLabel.setFont(new Font("Arial", Font.PLAIN, 24));
 
         buttons = new JButton[3][3];
 
@@ -20,6 +24,7 @@ public class TicTacToeView {
         for (int row = 0; row < 3; row++) {
             for (int col = 0; col < 3; col++) {
                 buttons[row][col] = new JButton();
+                buttons[row][col].setFont(new Font("Arial", Font.PLAIN, 96));
                 gridPanel.add(buttons[row][col]);
             }
         }
@@ -33,6 +38,7 @@ public class TicTacToeView {
         frame.setContentPane(mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setVisible(true);
     }
 

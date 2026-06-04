@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class TicTacToeController {
 
@@ -29,9 +30,11 @@ public class TicTacToeController {
             if (winner != '-') {
                 view.hideTopLabel();
                 view.setBottomLabel(winner + " wins!");
+                view.getBottomLabel().setForeground(Color.GREEN);
             } else if (model.isBoardFull()) {
                 view.hideTopLabel();
                 view.setBottomLabel("Tie!");
+                view.getBottomLabel().setForeground(Color.ORANGE);
             } else {
                 model.switchPlayer();
                 char nextPlayer = model.getCurrentPlayer();
